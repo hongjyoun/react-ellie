@@ -1,11 +1,12 @@
 import './App.css';
+import React, { useState } from 'react'
 import Profile from './components/Profile'
 
 function AppProfile() {
-  const isNew = false
+  const [isNew, setIsNew] = useState(false)
   const onclickNew = (event) => {
-    console.log(event)
-    this.isNew = true
+    // isNew === false ? setIsNew(true) : setIsNew(false)
+    setIsNew((prevValue) => !prevValue)
   }
   return (
     <>
